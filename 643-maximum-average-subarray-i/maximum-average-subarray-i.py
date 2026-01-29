@@ -4,8 +4,8 @@ class Solution(object):
         max_sum = window_sum
 
         for i in range(k, len(nums)):
-            window_sum += nums[i]      # add new element
-            window_sum -= nums[i - k]  # remove old element
+            window_sum += nums[i]      
+            window_sum -= nums[i - k]  
             max_sum = max(max_sum, window_sum)
 
         return max_sum / float(k)
